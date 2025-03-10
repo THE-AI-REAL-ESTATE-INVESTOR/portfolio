@@ -1,0 +1,105 @@
+# Cursor Rules for Next.js + Tailwind CSS Project
+
+## Theme Configuration
+- Dark mode is configured using the 'class' strategy
+- Default theme starts in dark mode with `className="dark"` on html element
+- Theme toggle persists user preference in localStorage
+
+## CSS Structure
+1. Global CSS (@/app/globals.css):
+```css
+@import "tailwindcss";
+
+/* Theme variables are defined in :root and .dark */
+:root {
+  --bg-main: theme(colors.gray.100);
+  --bg-mid: theme(colors.gray.50);
+  --bg-end: theme(colors.white);
+}
+
+.dark {
+  --bg-main: theme(colors.black);
+  --bg-mid: theme(colors.black);
+  --bg-end: theme(colors.black);
+}
+```
+
+## Gradient Backgrounds
+- Use CSS variables with theme() function for gradients
+- Apply transitions using transition-colors
+- Example:
+```css
+background-image: linear-gradient(to bottom, var(--bg-main), var(--bg-mid), var(--bg-end));
+```
+
+## Component Conventions
+1. Client Components:
+   - Add "use client" directive
+   - Use useState for local state
+   - Use useEffect for theme detection
+
+2. Theme Toggle:
+```typescript
+const [isDarkMode, setIsDarkMode] = useState(true);
+document.documentElement.classList.toggle('dark');
+```
+
+## Layout Structure
+1. Root Layout:
+```typescript
+<html lang="en" className="dark">
+  <body className={`${fontVariables} antialiased min-h-screen`}>
+```
+
+2. Container Layout:
+```typescript
+<main className="container mx-auto">
+```
+
+## Animation Classes
+- Use @keyframes for custom animations
+- Define in globals.css under @layer utilities
+- Example:
+```css
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  75% { transform: rotate(20deg); }
+}
+```
+
+## Tailwind Class Order
+1. Layout & Positioning
+2. Display & Flex/Grid
+3. Spacing (margin, padding)
+4. Sizing (width, height)
+5. Typography
+6. Backgrounds
+7. Borders
+8. Effects & Transitions
+9. Interactivity
+10. Dark Mode Variants
+
+## Dark Mode Variants
+- Use dark: prefix for dark mode styles
+- Example: `className="text-gray-900 dark:text-white"`
+
+## Common Patterns
+1. Gradient Text:
+```typescript
+className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+```
+
+2. Transitions:
+```typescript
+className="transition-all duration-300"
+```
+
+3. Hover States:
+```typescript
+className="hover:scale-105 hover:bg-blue-800"
+```
+
+## References
+- Tailwind CSS Docs: https://tailwindcss.com/docs
+- Next.js + Tailwind Guide: https://tailwindcss.com/docs/guides/nextjs 
