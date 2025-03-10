@@ -1,6 +1,6 @@
 # Mark Carpenter's Portfolio
 
-![AI REI](https://github.com/THE-AI-REAL-ESTATE-INVESTOR/portfolio/blob/main/chat-app/public/airei.jpg?raw=true)
+![AI REI](https://github.com/THE-AI-REAL-ESTATE-INVESTOR/portfolio/blob/main/prtfolio/public/airei.jpg?raw=true)
 
 ## 👨‍💻 About Me
 
