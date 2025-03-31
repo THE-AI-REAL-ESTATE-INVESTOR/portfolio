@@ -1,12 +1,12 @@
 # Mark Carpenter's Portfolio
 
-[!AI REI](https://github.com/THE-AI-REAL-ESTATE-INVESTOR/portfolio/blob/main/portfolio/public/airei.jpg?raw=true)
+ [![Full Stack Developer My portfolio click here ](https://marks-portfolio-69eq.onrender.com/image.png)](https://marks-portfolio-69eq.onrender.com)
 
 ## 👨‍💻 About Me
 
 Full-stack developer and AI engineer specializing in modern web technologies and cloud solutions. My expertise spans:
 
--  [![Full Stack Developer](https://marks-portfolio-69eq.onrender.com/image.png)](https://marks-portfolio-69eq.onrender.com)
+- 
 - 🤖 AI/ML Engineering
 - ☁️ Cloud Architecture (AWS, GCP, Azure)
 - 🚀 Full-Stack Development
